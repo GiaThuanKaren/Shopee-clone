@@ -7,7 +7,7 @@ const ArrCategort=[...Maincategory,...Responsivecategory];
 console.log(ArrCategort)
 PreventEmptyLinks();
 Category();
-RenderProducts('http://makeup-api.herokuapp.com/api/v1/products.json?product_type=Blush')
+RenderProducts('https://makeup-api.herokuapp.com/api/v1/products.json?product_type=Blush')
 function Category(){
     ArrCategort.forEach(function(item,idx){
         item.onclick=function(){
