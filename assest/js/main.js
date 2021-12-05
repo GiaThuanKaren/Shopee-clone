@@ -20,7 +20,7 @@ function Category(){
             }
             else console.log(this.className)
 
-            let url=`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${this.innerText.replace(" ","+")}`
+            let url=`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${this.innerText.replace(" ","+")}`
             console.log(url)
             RenderProducts(url)
             
