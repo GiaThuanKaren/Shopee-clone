@@ -254,9 +254,9 @@ function SearchFeature(){
                         if(item.indexOf(string)!=-1){
                             item=item.replace(/\s/g, '+');
                             // console.log(item);
-                            let url1=`http://makeup-api.herokuapp.com/api/v1/products.json?product_tags=${item.replace(/\s\s+/g,'+')}`
-                            let url2=`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${item.replace(/\s\s+/g,'+')}`
-                            let url3=`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${item.replace(/\s\s+/g,'+')}`
+                            let url1=`https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=${item.replace(/\s\s+/g,'+')}`
+                            let url2=`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${item.replace(/\s\s+/g,'+')}`
+                            let url3=`https://makeup-api.herokuapp.com/api/v1/products.json?brand=${item.replace(/\s\s+/g,'+')}`
                             let urlArr=[url1,url2,url3];
                             ResultArr=[...ResultArr,...urlArr];
                       //      console.log(ResultArr.length);
@@ -311,7 +311,7 @@ function RenderItemForMainSearch(urlarr){
     trong hàm này mình dùng  insertAdjacentHTML() nếu không xóa bên trong cái danh sách
     thì khi dùng phương thức trên sẽ tiếp tục render trên UI cũ */
     $('.home-product .row').innerHTML='';
-    
+
     for(let x of urlarr){
         console.log(x)
     fetch (x).then(res=>res.json())
@@ -378,15 +378,15 @@ function SearchKeyWord(){
             let product=item.children[0].innerText.replace(/ /g,'+');
             console.log(product)
             if(Type=='ProductType'){
-                let url=`http://makeup-api.herokuapp.com/api/v1/products.json?product_tags=${product}`
+                let url=`https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=${product}`
                 RenderProducts(url);
             }
             if(Type=='Tag'){
-                let url=`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${product}`
+                let url=`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${product}`
                 RenderProducts(url);
             }
             else{
-                let url=`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${product}`
+                let url=`https://makeup-api.herokuapp.com/api/v1/products.json?brand=${product}`
                 RenderProducts(url);
             }
         }
