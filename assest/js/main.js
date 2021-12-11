@@ -269,7 +269,7 @@ function SearchFeature(){
                 this.value="";
                 string="";
             }  
-            else if(e.key!='Shift' && e.key !='Enter' &&e.key !='Backspace'){
+            else if(e.key!='Shift' && e.key !='Enter' &&e.key !='Backspace' && e.key !='capslock'){
                 console.log("Typing");
                 string+=e.key;
             }
