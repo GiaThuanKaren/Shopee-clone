@@ -30,6 +30,9 @@
     .mobile-category {
         display: block;
     }
+    .header__search-history-heading-wrapper i{
+        display: block;
+    }
     
 }
 
@@ -45,6 +48,9 @@
     .header__cart {
         width: 80px;
         text-align: right;
+    }
+    .header__search-history-heading-wrapper i{
+        font-size: 1.2rem;
     }
 }
 

@@ -940,17 +940,29 @@ button.btn {
 
 .header__search-input:focus ~ .header__search-history {
     display: block;
+} 
+
+.header__search-history-heading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.header__search-history-heading-wrapper i{
+    padding: 2px 20px;
+    font-size: 2rem;
+    display: none;
+}
 .header__search-history {
     position: absolute;
+    max-height: 40vh;
     top: calc(100% + 4px);
     left: 0;
     width: calc(100% - 16px);
     background-color: var(--white-color);
     border-radius: 2px;
-    box-shadow: 0 0 5px rgb(189, 189, 189);
-    overflow: hidden;
+    box-shadow: 0 2px 5px rgb(189, 189, 189);
+    overflow-y: auto;
     display: none;
     z-index: 1;
 }
@@ -969,10 +981,38 @@ button.btn {
 }
 
 .header__search-history-item {
-    height: 38px;
     padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+
+.header__search-history-item .header__search-history-item-tag{
+    min-width: 30px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.header__search-history-item .header__search-history-item-tag.Brand{
+    background-color: #86c4d7;
+}
+
+
+.header__search-history-item .header__search-history-item-tag.ProductType{
+    background-color: #88cf81;
+}
+
+.header__search-history-item .header__search-history-item-tag.Tag{
+    background-color: #ebac4e;
+}
+.header__search-history-item i{
+    font-size: 1rem;
+    padding: 8px;
+ 
+    
+}
 .header__search-history-item:hover {
     background-color: #fafafa;
     
