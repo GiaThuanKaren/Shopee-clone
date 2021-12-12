@@ -1366,6 +1366,8 @@ i.home-product-item__like-icon-fill {
 
 .home-product-item__like--liked .home-product-item__like-icon-fill{
     display: inline-block;
+    font-size: 1.3rem;
+    padding: 5px;
 }
 
 .home-product-item__like--liked .home-product-item__like-icon-empty {
