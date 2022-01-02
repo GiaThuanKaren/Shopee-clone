@@ -188,9 +188,18 @@ html {
 }
 
 li.select-input__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 8px;
 }
+li.select-input__item i {
+    display: none;
+}
 
+li.select-input__item.active i{
+    display: block;
+}
 .select-input__link {
     font-size: 1.4rem;
     color: var(--text-color);
